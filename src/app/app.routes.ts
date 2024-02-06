@@ -1,16 +1,11 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  // { path: '', pathMatch: 'full', redirectTo: '/courses' },
+  { path: '', pathMatch: 'full', redirectTo: 'especialidades' },
   {
-    path: 'aa',
-    loadComponent: () => import('./especialidades/especialidades/especialidades.component').then(mod => mod.EspecialidadesComponent)
+    path: 'especialidades',
+    loadChildren: () => import('./especialidades/especialidades.routes').then(m => m.ESPECIALIDADES_ROUTES)
   }
-
-  // {
-  //   path:"aa",
-  //   component:EspecialidadesComponent
-  // }
 
 ];
 
